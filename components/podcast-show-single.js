@@ -204,6 +204,7 @@ class Component extends LitElement {
         <img src="${show.image}" />
         <p>${show.description}</p>
       </div>
+      <hr>
       ${seasons}
     `;
   }

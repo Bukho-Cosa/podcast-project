@@ -119,10 +119,19 @@ class Component extends LitElement {
 
       const clickHandler = () => store.loadSingle(id);
 
+      const genreListEl = document.querySelector('#genreList');
+
+    function showGenreText() {
+      genreListEl.style.visibility = "visible";
+    };
+    function hideGenreText() {
+      genreListEl.style.visibility = "hidden";
+    }
+
       return html`
         <div >
           <div class="innerDivs">
-            <img id="image" src="${image}" alt="n/a" />
+            <img onmouseover="showGenreText()" onmouseout="hideGenreText()" id="image" src="${image}" alt="n/a" />
             <ul id="genreList" class="centered">
               <li>${genres}</li>
             </ul>
@@ -134,14 +143,6 @@ class Component extends LitElement {
       `;
     });
 
-    /*******   this did not work  *******/
-    /*const imageEl = document.querySelector('#image').addEventListener(
-        "mouseover", over);
-    const genreListEl = document.querySelector('#genreList');
-
-    function over() {
-        genreListEl.style.visibility = "visible";
-    }*/
 
     return html`
       <h1>Podcast List</h1>
