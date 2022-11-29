@@ -53,7 +53,7 @@ class Component extends LitElement {
     .container {
       display: grid;
       width: 100%;
-      grid-template-columns: 50% 50%; //this won't work
+      grid-template-columns: 50% 50%; 
     }
     .innerDivs{
         border: 1px solid pink;
@@ -66,9 +66,6 @@ class Component extends LitElement {
     }
     img:hover {
       opacity: 0.33;
-    }
-    img:hover .centered{
-        visibility: visible;
     }
     h5 {
       margin: 0;
@@ -119,13 +116,12 @@ class Component extends LitElement {
 
       const clickHandler = () => store.loadSingle(id);
 
-      const genreListEl = document.querySelector('#genreList');
 
     function showGenreText() {
-      genreListEl.style.visibility = "visible";
+      genres.style.visibility = "visible";
     };
     function hideGenreText() {
-      genreListEl.style.visibility = "hidden";
+      genres.style.visibility = "hidden";
     }
 
       return html`

@@ -178,6 +178,9 @@ class Component extends LitElement {
     const backHandler = () => store.loadList();
 
     const seasons = show.seasons.map(({ episodes, title }) => {
+
+      const seasonNumber = count(show.seasons);
+      
       return html`
         <div>
           <strong>${title}</strong>
